@@ -1,0 +1,4 @@
+{
+    "ammount_textbox_selector": "input[name=\"quantity\"]",
+    "price_selector": "[class=\"no-underline\"]"
+}
