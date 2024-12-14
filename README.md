@@ -1,5 +1,5 @@
 # nautical
-The run the test case:
+To run the test case:
 
 1. Clone the project repo into your local machine
 2. Navigate to the project directory in your local machine
