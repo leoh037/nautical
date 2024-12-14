@@ -49,8 +49,8 @@ test("An automated test covering an e-commerce checkout flow", async ({ page,req
     const productCount: number = 1;
     await addCurrentProductToCart(page, productCount);
     let shoppingCart: ShoppingCartPage = await ShoppingCartPage.getInstance(page);
-    await shoppingCart.clickCheckoutButton();
 
+    await shoppingCart.clickCheckoutButton();
     let checkoutPage = await CheckoutPage.getInstance(page);
     await expect(checkoutPage.shipping_information_form).toBeVisible();
     await expect(checkoutPage.shipping_methods_form).toBeVisible();
@@ -113,7 +113,7 @@ test("An automated test covering an e-commerce checkout flow", async ({ page,req
     await expect(deliveryMethod).toBeVisible();
     await expect(await deliveryMethod.locator('dd').filter({ hasText: `${delivery} - $${shippingCost}`})).toBeVisible();
 
-    // Selecting the same shopping address for the billing address
+    // Selecting the same shipping address for the billing address
     await checkoutPage.checkUseShippingAddress();
     await checkoutPage.clickBillinggSaveButton();
 
