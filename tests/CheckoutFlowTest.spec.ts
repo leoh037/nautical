@@ -106,7 +106,6 @@ test("An automated test covering an e-commerce checkout flow", async ({ page,req
     await expect(await shippingAddress.locator('span').filter({ hasText: `${userInformation.country}`})).toBeVisible();
     await expect(await shippingAddress.locator('span').filter({ hasText: `+${userInformation.phone}`})).toBeVisible();
 
-
     const delivery: string = 'QA Automation Quick Delivery';
     let shippingCost: string = await checkoutPage.selectShippingMethod(delivery)
     await checkoutPage.clickShippingMethodSaveButton();
